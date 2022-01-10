@@ -1,0 +1,6 @@
+{
+	"appId": "com.snow.app",
+	"appName": "snow",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

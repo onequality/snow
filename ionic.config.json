@@ -1,5 +1,7 @@
 {
   "name": "snow",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

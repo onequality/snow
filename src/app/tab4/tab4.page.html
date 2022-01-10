@@ -6,22 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-  <ion-content [fullscreen]="true" padding>
+<ion-content [fullscreen]="true" padding>
 
-    <ion-list *ngFor="let job of listJobs">
-      <ion-item-sliding>
-        <ion-item >
-          <ion-label>
-            <h3>{{job.date_job_string}} - Snow - {{job.snow}}</h3>
-            <p>
-              Ice Malt: {{job.icemelt_i}} &mdash; Shoviling: {{job.shoviling_i}} &mdash; Plaw: {{job.plaw_i}}
-            </p>
-            <p>
-              {{job.obs}} 
-            </p>
-          </ion-label>
-        </ion-item>
-      </ion-item-sliding>
-    </ion-list>
+  <div class="ion-padding">
+    <div id="printer">
+
+
+      <ion-list *ngFor="let job of listJobs">
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              <h3>{{job.date_job_string}} - Snow - {{job.snow}}</h3>
+              <p>
+                Ice Malt: {{job.icemelt_i}} &mdash; Shoviling: {{job.shoviling_i}} &mdash; Plaw: {{job.plaw_i}}
+              </p>
+              <p>
+                {{job.obs}}
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
+
+    </div>
+  </div>
+  <button class="button" (click)="print()">Print</button>
 
 </ion-content>
